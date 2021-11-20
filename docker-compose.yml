@@ -1,0 +1,24 @@
+version: "3.8" # optional since v1.27.0
+services:
+  timescaledb:
+    image: timescale/timescaledb:2.5.0-pg14
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_USER: "${DB_USER}"
+      POSTGRES_DB: "${DB_NAME}"
+    volumes:
+        - ./pgdata:/var/lib/postgresql/data
+    ports:
+        - "5433:5432"
+  kafka-cluster:
+    image: landoop/fast-data-dev:2.6.2-L0
+    environment:
+      ADV_HOST: 127.0.0.1         
+      RUNTESTS: 0                
+    ports:
+      - 2181:2181                 
+      - 3030:3030                
+      - 8081-8083:8081-8083       
+      - 9581-9585:9581-9585       
+      - 9092:9092                 

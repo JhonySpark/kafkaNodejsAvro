@@ -1,0 +1,16 @@
+{
+	"type": "record",
+	"name": "animal",
+	"namespace": "test",
+	"fields": [
+		{
+			"name": "kind",
+			"type": {
+				"type": "enum",
+				"name": "animalKind",
+				"symbols": ["CAT", "DOG"]
+			}
+		},
+		{ "name": "name", "type": "string" }
+	]
+}

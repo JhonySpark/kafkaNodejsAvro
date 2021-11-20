@@ -1,0 +1,17 @@
+{
+  "name": "kafkanodejsavro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.1.1",
+    "avro-to-json-schema": "^0.1.0",
+    "avsc": "^5.7.3",
+    "kafkajs": "^1.15.0"
+  }
+}
